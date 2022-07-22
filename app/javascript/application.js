@@ -4,6 +4,7 @@ import "controllers"
 
 import "popper"
 import "bootstrap"
+import autosize from 'autosize'
 
 document.addEventListener("turbo:load", () => {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
@@ -15,4 +16,5 @@ document.addEventListener("turbo:load", () => {
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)    
   })
+  autosize(document.querySelectorAll('textarea'));
 })
