@@ -79,8 +79,9 @@ group :development do
   gem 'annotate'
 end
 
-gem 'bootstrap', '~> 5.1.3'
-gem "bootswatch", github: "thomaspark/bootswatch"
+# Adds preset CSS styles and themes
+gem 'bootstrap', '~> 5.2.0'
+gem 'bootswatch', github: 'thomaspark/bootswatch'
 
 # Replaces Rails form helpers with bootstrap-specific form helpers
-gem "bootstrap_form", "~> 4.0"
+gem 'bootstrap_form', '~> 5.1'
