@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: reviews
@@ -14,4 +16,5 @@
 #  updated_at   :datetime         not null
 #
 class Review < ApplicationRecord
+  validates :title, presence: true
 end
