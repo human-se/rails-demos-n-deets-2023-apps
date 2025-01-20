@@ -26,3 +26,7 @@ label.required:after {
 main {
   margin-top: 20px;
 }
+
+.alert-dismissible {
+  padding-left: $alert-dismissible-padding-r;
+}
