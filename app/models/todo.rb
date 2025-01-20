@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: todos
@@ -10,4 +12,7 @@
 #  updated_at  :datetime         not null
 #
 class Todo < ApplicationRecord
+  validates :title, presence: true
+  validates :due_date, presence: true
+  validates :due_date, comparison: { greater_than_or_equal_to: proc { Date.today } }
 end
