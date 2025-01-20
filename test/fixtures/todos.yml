@@ -12,11 +12,6 @@
 #  updated_at  :datetime         not null
 #
 one:
-  title: MyString
-  description: MyText
-  due_date: 2025-01-20
-
-two:
-  title: MyString
-  description: MyText
-  due_date: 2025-01-20
+  title: Slay the Dragon
+  description: Go to the End and slay the Enderdragon.
+  due_date: <%= Date.today %>
