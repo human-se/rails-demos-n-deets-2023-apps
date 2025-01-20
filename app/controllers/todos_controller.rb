@@ -16,6 +16,11 @@ class TodosController < ApplicationController
     render :new
   end
 
+  def edit
+    @todo = Todo.find(params[:id])
+    render :edit
+  end
+
   def create
     @todo = Todo.new(params.require(:todo).permit(:title, :description, :due_date))
     if @todo.save
