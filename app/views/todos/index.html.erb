@@ -15,7 +15,10 @@
       <tr>
         <td><%= link_to todo.title, todo_path(todo) %></td>
         <td><%= todo.due_date.strftime('%m/%d/%Y') %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo), class: 'btn btn-sm btn-primary' %></td>
+        <td class="nowrap">
+          <%= link_to 'Edit', edit_todo_path(todo), class: 'btn btn-sm btn-primary' %>
+          <%= button_to 'Delete', todo_path(todo), method: :delete, data: { turbo: false }, class: 'btn btn-sm btn-danger', form: { class: 'd-inline' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
