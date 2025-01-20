@@ -22,5 +22,6 @@ class ReviewTest < ActiveSupport::TestCase
   #   assert true
   # end
   test 'all fixtures should be valid' do
+    review_one = reviews(:one)
   end
 end
