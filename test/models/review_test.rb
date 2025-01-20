@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: reviews
@@ -13,10 +15,12 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
-require "test_helper"
+require 'test_helper'
 
 class ReviewTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  test 'all fixtures should be valid' do
+  end
 end
