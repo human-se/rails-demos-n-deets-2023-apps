@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  genre: MyString
+  link: MyString
+  release_date: 2025-01-20
+  review_date: 2025-01-20
+  score: 9.99
+  title: MyString
+
+two:
+  body: MyText
+  genre: MyString
+  link: MyString
+  release_date: 2025-01-20
+  review_date: 2025-01-20
+  score: 9.99
+  title: MyString
