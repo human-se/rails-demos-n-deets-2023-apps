@@ -1,0 +1,47 @@
+require:
+  - rubocop-rails
+  - rubocop-capybara
+  - rubocop-factory_bot
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
+AllCops:
+  NewCops: enable
+
+Style/Documentation:
+  Enabled: false
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Metrics/BlockLength:
+  CountAsOne: ["array", "heredoc"]
+  AllowedMethods:
+    - describe
+    - context
+
+Metrics/ClassLength:
+  CountAsOne: ["array", "heredoc"]
+
+Metrics/MethodLength:
+  Enabled: false
+  CountAsOne: ["array", "heredoc"]
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  SafeAutoCorrect: true
+
+Metrics/AbcSize:
+  Max: 20
+
+Rails/RedundantForeignKey:
+  Enabled: false
+
+Rails/I18nLocaleAssignment:
+  Enabled: false
