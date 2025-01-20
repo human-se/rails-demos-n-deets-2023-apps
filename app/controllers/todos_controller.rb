@@ -42,4 +42,11 @@ class TodosController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @todo = Todo.find(params[:id])
+    @todo.destroy
+    flash[:success] = 'The to-do item was successfully destroyed.'
+    redirect_to todos_url, status: :see_other
+  end
 end
