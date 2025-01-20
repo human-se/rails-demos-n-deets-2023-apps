@@ -1,0 +1,27 @@
+<p>
+  <strong>First name:</strong>
+  <%= @basketball_player.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @basketball_player.last_name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @basketball_player.position %>
+</p>
+
+<p>
+  <strong>Height inches:</strong>
+  <%= @basketball_player.height_inches %>
+</p>
+
+<p>
+  <strong>Weight lbs:</strong>
+  <%= @basketball_player.weight_lbs %>
+</p>
+
+<%= link_to 'Edit', edit_basketball_player_path(@basketball_player) %>
+<%= link_to 'Back', basketball_players_path %>

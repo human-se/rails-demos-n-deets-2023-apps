@@ -1,0 +1,12 @@
+<h1>Edit Player</h1>
+
+<%= bootstrap_form_with model: @basketball_player, url: basketball_player_path(@basketball_player), method: :patch, local: true do |f| %>
+  <%= f.text_field :first_name %>
+  <%= f.text_field :last_name %>
+  <%= f.text_field :position %>
+  <%= f.number_field :height_inches %>
+  <%= f.number_field :weight_lbs %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Back', basketball_players_path, class: 'btn btn-secondary' %>

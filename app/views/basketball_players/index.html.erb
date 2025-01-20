@@ -1,0 +1,35 @@
+<h1>Basketball Players</h1>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Position</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @basketball_players.each do |basketball_player| %>
+      <tr>
+        <td><%= basketball_player.first_name %></td>
+        <td><%= basketball_player.last_name %></td>
+        <td><%= basketball_player.position %></td>
+        <td><%= basketball_player.height_inches / 12 %>' <%= basketball_player.height_inches % 12 %>'</td>
+        <td><%= basketball_player.weight_lbs %> lbs.</td>
+        <td>
+          <%= link_to '🔍︎', basketball_player_path(basketball_player), class: 'btn btn-link' %>
+          <%= link_to '🖊', edit_basketball_player_path(basketball_player), class: 'btn btn-link' %>
+          <%= button_to '🗑', basketball_player_path(basketball_player), method: :delete, data: { turbo: false }, class: 'btn btn-link', form_class: 'd-inline' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Basketball Player', new_basketball_player_path, class: 'btn btn-secondary' %>

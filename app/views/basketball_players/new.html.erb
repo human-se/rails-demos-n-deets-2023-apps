@@ -1,0 +1,12 @@
+<h1>New Player</h1>
+
+<%= bootstrap_form_with model: @basketball_player, url: basketball_players_path, method: :post, local: true do |f| %>
+  <%= f.text_field :first_name %>
+  <%= f.text_field :last_name %>
+  <%= f.text_field :position %>
+  <%= f.number_field :height_inches %>
+  <%= f.number_field :weight_lbs %>
+  <%= f.submit nil, class: 'btn btn-secondary' %>
+<% end %>
+
+<%= link_to 'Back', basketball_players_path, class: 'btn btn-secondary' %>
