@@ -5,6 +5,7 @@
   <thead class="table-dark">
     <tr>
       <th>Question</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -12,6 +13,9 @@
     <% @questions.each do |question| %>
       <tr>
         <td><%= question.stem %></td>
+        <td class="text-nowrap">
+          <%= link_to 'show', quiz_question_path(@quiz, question), class: 'btn btn-sm btn-outline-secondary' %>
+        </td>
       </tr>
     <% end %>
   </tbody>

@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   delete 'quizzes/:id', to: 'quizzes#destroy'
 
   get 'quizzes/:quiz_id/questions', to: 'questions#index', as: 'quiz_questions'
+  get 'quizzes/:quiz_id/questions/:id', to: 'questions#show', as: 'quiz_question'
 end
