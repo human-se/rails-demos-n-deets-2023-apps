@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: todos
@@ -9,10 +11,13 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-require "test_helper"
+require 'test_helper'
 
 class TodoTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+
+  test 'fixtures are valid' do
+  end
 end
