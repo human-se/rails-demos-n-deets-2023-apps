@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @quiz = Quiz.find(params[:quiz_id])
     @questions = @quiz.questions
