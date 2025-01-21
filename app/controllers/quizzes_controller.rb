@@ -2,6 +2,7 @@
 
 class QuizzesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  before_action :require_permission, except: %i[index show new create]
 
   def index
     @quizzes = Quiz.all
@@ -50,5 +51,12 @@ class QuizzesController < ApplicationController
     @quiz.destroy
     flash[:success] = 'Quiz successfully deleted!'
     redirect_to quizzes_url
+  end
+
+  def require_permission
+    return unless Quiz.find(params[:id]).creator != current_user
+
+    flash[:error] = 'You do not have permission to do that.'
+    redirect_to quizzes_path
   end
 end
