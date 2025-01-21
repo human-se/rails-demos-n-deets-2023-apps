@@ -7,6 +7,7 @@
       <tr>
         <th>Title</th>
         <th>Description</th>
+        <th>Creator</th>
         <th></th>
       </tr>
     </thead>
@@ -16,6 +17,7 @@
         <tr>
           <td><%= quiz.title %></td>
           <td><%= quiz.description %></td>
+          <td><%= quiz.creator.email %></td>
           <td class="text-nowrap">
             <%= link_to 'show', quiz_path(quiz), class: 'btn btn-sm btn-outline-primary' %>
             <%= link_to 'edit', edit_quiz_path(quiz), class: 'btn btn-sm btn-outline-primary' %>
@@ -29,5 +31,5 @@
 </div>
 
 <p>
-  <%= link_to 'New Quiz', new_quiz_path, class: "btn btn-primary" %>
+  <%= link_to 'New Quiz', new_quiz_path, class: 'btn btn-primary' %>
 </p>

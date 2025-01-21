@@ -23,7 +23,8 @@ user2 = User.create!(
 # Quiz 1
 quiz1 = Quiz.create!(
   title:       'American History 1',
-  description: 'American History 1776 - 1800'
+  description: 'American History 1776 - 1800',
+  creator:     user1
 )
 
 quiz1_q1 = Question.create!(
@@ -50,11 +51,13 @@ quiz1_q3 = Question.create!(
 # Quiz 2
 quiz2 = Quiz.create!(
   title:       'Chemistry - Element Names',
-  description: 'Names of all of the elements of the periodic table'
+  description: 'Names of all of the elements of the periodic table',
+  creator:     user1
 )
 
 # Quiz 3
 quiz3 = Quiz.create!(
   title:       'Math - Algebra 2',
-  description: 'Completing the Square to solve equations'
+  description: 'Completing the Square to solve equations',
+  creator:     user2
 )
