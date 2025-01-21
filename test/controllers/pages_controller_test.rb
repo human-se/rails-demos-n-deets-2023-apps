@@ -8,5 +8,6 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
   # end
 
   test 'should get about' do
+    get about_url
   end
 end
