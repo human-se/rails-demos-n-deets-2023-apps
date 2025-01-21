@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   root to: redirect('/quizzes')
 
+  devise_for :users
+
   get 'quizzes', to: 'quizzes#index', as: 'quizzes'
   post 'quizzes', to: 'quizzes#create'
   get 'quizzes/new', to: 'quizzes#new', as: 'new_quiz'
