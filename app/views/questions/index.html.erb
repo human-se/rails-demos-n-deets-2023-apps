@@ -1,0 +1,23 @@
+<h1><%= @quiz.title %> Questions</h1>
+
+<table class="table table-striped table-hover">
+
+  <thead class="table-dark">
+    <tr>
+      <th>Question</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.stem %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<p>
+  <%= link_to 'Back to quiz', quiz_path(@quiz), class: 'btn btn-outline-secondary' %>
+</p>
