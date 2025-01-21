@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# == Schema Information
+#
+# Table name: employees
+#
+#  id         :bigint           not null, primary key
+#  dob        :date
+#  empid      :string
+#  fname      :string
+#  lname      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+one:
+  dob: 2025-01-20
+  empid: MyString
+  fname: MyString
+  lname: MyString
+
+two:
+  dob: 2025-01-20
+  empid: MyString
+  fname: MyString
+  lname: MyString
