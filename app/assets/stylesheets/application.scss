@@ -13,9 +13,9 @@
  */
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "yeti/variables";
+@import "litera/variables";
 @import "bootstrap";
-@import "yeti/bootswatch";
+@import "litera/bootswatch";
 
 @import "rails_bootstrap_forms";
 
@@ -25,4 +25,8 @@ label.required:after {
 
 main {
   margin-top: 20px;
+}
+
+.alert-dismissible {
+  padding-left: $alert-dismissible-padding-r;
 }

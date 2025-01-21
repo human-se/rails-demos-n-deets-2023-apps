@@ -1,0 +1,5 @@
+<%= bootstrap_form_with model: quiz, data: { turbo: false } do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :description %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
