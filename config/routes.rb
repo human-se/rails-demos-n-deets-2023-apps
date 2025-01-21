@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   post 'quizzes/:quiz_id/questions', to: 'questions#create'
   get 'quizzes/:quiz_id/questions/new', to: 'questions#new', as: 'new_quiz_question'
   get 'quizzes/:quiz_id/questions/:id', to: 'questions#show', as: 'quiz_question'
+  get '/quizzes/:quiz_id/questions/:id/edit', to: 'questions#edit', as: 'edit_quiz_question'
+  patch '/quizzes/:quiz_id/questions/:id', to: 'questions#update'
 end
