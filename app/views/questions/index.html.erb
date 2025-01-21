@@ -15,8 +15,10 @@
         <td><%= question.stem %></td>
         <td class="text-nowrap">
           <%= link_to 'show', quiz_question_path(@quiz, question), class: 'btn btn-sm btn-outline-secondary' %>
-          <%= link_to 'edit', edit_quiz_question_path(@quiz, question), class: 'btn btn-outline-secondary btn-sm' %>
-          <%= button_to 'destroy', quiz_question_path(@quiz, question), method: :delete, data: { turbo: false }, class: 'btn btn-outline-secondary btn-sm', form: { class: 'd-inline' } %>
+          <% if @quiz.creator == current_user %>
+            <%= link_to 'edit', edit_quiz_question_path(@quiz, question), class: 'btn btn-outline-secondary btn-sm' %>
+            <%= button_to 'destroy', quiz_question_path(@quiz, question), method: :delete, data: { turbo: false }, class: 'btn btn-outline-secondary btn-sm', form: { class: 'd-inline' } %>
+          <% end %>
         </td>
       </tr>
     <% end %>
@@ -24,9 +26,11 @@
 
 </table>
 
-<p>
-  <%= link_to 'New Question', new_quiz_question_path(@quiz), class: 'btn btn-secondary' %>
-</p>
+<% if @quiz.creator == current_user %>
+  <p>
+    <%= link_to 'New Question', new_quiz_question_path(@quiz), class: 'btn btn-secondary' %>
+  </p>
+<% end %>
 
 <p>
   <%= link_to 'Back to quiz', quiz_path(@quiz), class: 'btn btn-outline-secondary' %>
