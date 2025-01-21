@@ -20,19 +20,22 @@ quiz1_q1 = Question.create!(
   stem:         'What city was the first capital of the United States?',
   answer:       'New York City',
   distractor_1: 'Washington, D.C.',
-  distractor_2: 'Boston'
+  distractor_2: 'Boston',
+  quiz:         quiz1
 )
 quiz1_q2 = Question.create!(
   stem:         'Who first discovered America?',
   answer:       'Leif Erikson',
   distractor_1: 'Christopher Columbus',
-  distractor_2: 'The Pilgrims'
+  distractor_2: 'The Pilgrims',
+  quiz:         quiz1
 )
 quiz1_q3 = Question.create!(
   stem:         'When was the Declaration of Independence signed?',
   answer:       'August 2nd, 1776',
   distractor_1: 'July 4, 1776',
-  distractor_2: 'September 3, 1783'
+  distractor_2: 'September 3, 1783',
+  quiz:         quiz1
 )
 # Quiz 2
 quiz2 = Quiz.create!(
