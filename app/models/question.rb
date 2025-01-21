@@ -22,6 +22,13 @@
 #  fk_rails_...  (quiz_id => quizzes.id)
 #
 class Question < ApplicationRecord
+  belongs_to(
+    :quiz,
+    class_name:  'Quiz',
+    foreign_key: 'quiz_id',
+    inverse_of:  :questions
+  )
+
   validates :stem, presence: true
   validates :answer, presence: true
   validates :distractor_1, presence: true
