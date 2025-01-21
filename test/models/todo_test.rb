@@ -19,5 +19,7 @@ class TodoTest < ActiveSupport::TestCase
   # end
 
   test 'fixtures are valid' do
+    todos.each do |todo|
+    end
   end
 end
