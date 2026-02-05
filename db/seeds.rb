@@ -19,13 +19,13 @@ Todo.create!(
 Todo.create!(
   title:       'Jimmy Jr. Soccer Game',
   description: 'Jimmy Jr. has a soccer game against the Rivertown Raviolis. If I miss it he\'ll be sad.',
-  due_date:    Date.new(2025, 11, 2)
+  due_date:    Date.new(2027, 11, 2)
 )
 
 Todo.create!(
   title:       'Take the Dog to the Vet',
   description: 'Newton has a checkup at the vet',
-  due_date:    Date.new(2025, 11, 5)
+  due_date:    Date.new(2027, 11, 5)
 )
 
 Todo.create!(
@@ -37,7 +37,7 @@ Todo.create!(
 Todo.create!(
   title:       'Fix Sink',
   description: 'Someone clogged the sink. Not pointing fingers. Brian.',
-  due_date:    Date.new(2026, 1, 3)
+  due_date:    Date.new(2028, 1, 3)
 )
 
 Todo.create!(
@@ -67,5 +67,5 @@ Todo.create!(
 Todo.create!(
   title:       'Rescue the Princess',
   description: 'There\'s a princess in a tower. Why is she in a tower? Why can\'t she get down???',
-  due_date:    Date.new(2026, 1, 14)
+  due_date:    Date.new(2028, 1, 14)
 )
